@@ -11,7 +11,7 @@
 
   <name>Hello World</name>
   <description>The most basic of Java programs.</description>
-  <url>httpss://www.coveros.com/</url>
+  <url>https://www.coveros.com/</url>
   <inceptionYear>2018</inceptionYear>
 
   <properties>
@@ -22,17 +22,15 @@
     <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
   </properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven.compiler.plugin.version}</version>
-        <configuration>
-          <source>${jdk.version}</source>
-          <target>${jdk.version}</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <repositories>
+  <repository>
+    <id>central</id>
+    <name>Central Repository</name>
+    <url>https://repo.maven.apache.org/maven2</url>
+    <layout>default</layout>
+    <snapshots>
+      <enabled>false</enabled>
+    </snapshots>
+  </repository>
+</repositories>
 </project>
